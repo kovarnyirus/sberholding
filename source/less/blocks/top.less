@@ -1,0 +1,87 @@
+.top {
+  background-image: url("../img/main-bg.jpg");
+  background-size: cover;
+}
+
+.top__wrapper {
+  max-width: 956px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 256px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: content-box;
+}
+
+.top__title {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 71px;
+  line-height: 115%;
+  margin-bottom: 39px;
+}
+
+.top__description {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 133%;
+  max-width: 734px;
+  margin-bottom: 81px;
+}
+
+.top__btn {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    right: 0;
+    top: -30px;
+    width: 80px;
+    height: 88px;
+    background-image: url("../img/coin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    //transform: rotateX(150deg);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .top {
+    background-position: center;
+
+  }
+
+  .top__title {
+    font-size: 35px;
+  }
+
+  .top__description {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .top__wrapper {
+    padding-bottom: 50px;
+  }
+
+  .top__btn {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .top__description {
+    margin-top: 20px;
+  }
+}

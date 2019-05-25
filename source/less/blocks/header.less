@@ -1,0 +1,51 @@
+
+.header {
+  margin-bottom: 62px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  margin-top: 67px;
+  max-width: 279px;
+}
+
+.header__address {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  position: relative;
+  margin-left: 28px;
+  margin-top: 77px;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 5px;
+    left: -27px;
+    width: 9px;
+    height: 12px;
+    background-image: url("../img/map-point.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .header{
+    margin-bottom: 0;
+  }
+  .header__address-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .header__address{
+    margin-top: 20px;
+  }
+}

@@ -365,6 +365,7 @@ strong {
           box-shadow: none;
   color: #ffffff;
   border: none;
+  padding: 2px;
 }
 .footer__btn:active {
   background: linear-gradient(127.17deg, #97FF97 -4%, #5CD45C 90%);
@@ -372,6 +373,7 @@ strong {
           box-shadow: none;
   color: #ffffff;
   border: none;
+  padding: 2px;
 }
 @media (max-width: 768px) {
   .footer__address {

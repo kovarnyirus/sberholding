@@ -364,12 +364,14 @@ strong {
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #ffffff;
+  border: none;
 }
 .footer__btn:active {
   background: linear-gradient(127.17deg, #97FF97 -4%, #5CD45C 90%);
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #ffffff;
+  border: none;
 }
 @media (max-width: 768px) {
   .footer__address {

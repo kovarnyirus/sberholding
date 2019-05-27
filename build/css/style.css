@@ -38,9 +38,11 @@ body {
   font-weight: normal;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
 }
 button {
   margin: 0;
+  outline: none;
 }
 div {
   -webkit-box-sizing: border-box;
@@ -141,10 +143,11 @@ strong {
   max-width: 734px;
   margin-bottom: 81px;
 }
-.top__btn {
+.top__btn-wrap {
   position: relative;
+  max-width: 335px;
 }
-.top__btn:before {
+.top__btn-wrap:before {
   position: absolute;
   display: block;
   content: "";
@@ -155,6 +158,43 @@ strong {
   top: -50px;
   width: 113px;
   height: 150px;
+  z-index: 3;
+}
+.top__btn {
+  position: relative;
+  overflow: hidden;
+}
+.top__btn:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  background: -webkit-gradient(linear, left top, right top, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.6)));
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.6) 100%);
+  width: 45px;
+  -webkit-transform: skewX(-22deg);
+  transform: skewX(-22deg);
+  left: -65%;
+  -webkit-animation-name: blick;
+  animation-name: blick;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@-webkit-keyframes blick {
+  0% {
+    left: -30px;
+    margin-left: 0px;
+  }
+  30% {
+    left: 110%;
+    margin-left: 80px;
+  }
+  100% {
+    left: 110%;
+    margin-left: 80px;
+  }
 }
 @media (max-width: 1024px) {
   .top {
@@ -266,6 +306,7 @@ strong {
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+  min-height: 48px;
 }
 .advantages__list {
   display: -webkit-box;
@@ -358,6 +399,8 @@ strong {
   border: 2px solid #04A004;
   -webkit-box-shadow: 0px 10px 50px rgba(4, 160, 4, 0.3);
           box-shadow: 0px 10px 50px rgba(4, 160, 4, 0.3);
+  -webkit-transition: none;
+  transition: none;
 }
 .footer__btn:hover {
   background: linear-gradient(127.71deg, #1FBC1F 20.13%, #009C00 90.1%);
@@ -365,7 +408,9 @@ strong {
           box-shadow: none;
   color: #ffffff;
   border: none;
-  padding: 31px;
+  min-height: 79px;
+  -webkit-transition: none;
+  transition: none;
 }
 .footer__btn:active {
   background: linear-gradient(127.17deg, #97FF97 -4%, #5CD45C 90%);
@@ -374,6 +419,8 @@ strong {
   color: #ffffff;
   border: none;
   padding: 31px;
+  -webkit-transition: none;
+  transition: none;
 }
 @media (max-width: 768px) {
   .footer__address {

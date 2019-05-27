@@ -32,9 +32,9 @@
   margin-bottom: 81px;
 }
 
-.top__btn {
+.top__btn-wrap{
   position: relative;
-
+  max-width: 335px;
   &:before {
     position: absolute;
     display: block;
@@ -46,7 +46,36 @@
     top: -50px;
     width: 113px;
     height: 150px;
+    z-index: 3;
   }
+}
+
+.top__btn {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+    background: linear-gradient(90deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,.6) 100%);
+    width: 45px;
+    -webkit-transform: skewX(-22deg);
+    transform: skewX(-22deg);
+    left: -65%;
+    -webkit-animation-name: blick;
+    animation-name: blick;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+}
+@-webkit-keyframes blick {
+  0% { left: -30px; margin-left: 0px; }
+  30% { left: 110%; margin-left: 80px; }
+  100% { left: 110%; margin-left: 80px; }
 }
 
 

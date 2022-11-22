@@ -5,7 +5,7 @@
   "description": "test",
   "devDependencies": {
     "autoprefixer": "9.1.x",
-    "browser-sync": "2.24.x",
+    "browser-sync": "2.27.x",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
